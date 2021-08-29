@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Mask Management System</title>
+</head>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="script.js"></script>
+<style type=text/css>
+
+p{
+  background-color:light-gray;
+  margin: 10px;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #04AA6D;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+}
+.btn:hover {
+  color: #04AA6D;
+}
+.btn-check:focus + .btn, .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.btn:disabled, .btn.disabled, fieldset:disabled .btn {
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #04AA6D;
+  border-color: #04AA6D;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+.btn-check:focus + .btn-primary, .btn-primary:focus {
+  color: #fff;
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+.btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #0a58ca;
+  border-color: #0a53be;
+}
+.btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(49, 132, 253, 0.5);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  color: #fff;
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+div
+{
+  color: white;
+  background-color: 009900;
+  margin: 2px;
+  font-size: 20px;
+}
+img {
+  border-radius: 8px;
+}
+h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+#grad1 {
+
+  background-image: linear-gradient(to bottom, rgba(34,193,0,0), rgba(34,195,0,1));
+}
+#grad {
+
+  background-image: linear-gradient(to bottom, rgba(88,255,178,0), rgba(88,255,178,1));
+}
+header.masthead {
+  position: relative;
+  background-color: #343a40;
+  background: url("") no-repeat center center;
+  background-size: cover;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 33px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #00cc00;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+}
+.topnav .icon {
+  display: none;
+}
+
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+</style>
+
+<body>
+
+<div class="topnav" id="myTopnav">
+
+<div class="topnav-left">
+    <a href="#home" class="active">MASK MANAGEMENT SYSTEM</a>
+    <a href="#news">Donar</a>
+  <a href="#contact">Municipal</a>
+    <a href="#search">Receiver</a>
+    <a href="#about">Pioneer Of A Event</a>
+    <a href="#news">Our Team</a>
+    <a href="#news">Contact Us</a>
+
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+
+ <div id="grad">
+   <br><br><h1><center><div id="grad1"><h1><b>MASK MANAGEMENT SYSTEM</b></h1></div></center></h1>
+
+</div>
+
+<div></div>
+<center><h2><font color="#0f0f0f">---Take A Look At Waste Generation Due To Pandemic---</font></h2></center>
+<center>
+<img img class="w3-animate-zoom" src="Homepage1.jpg" alt="" width="400" height="300">
+<img img class="w3-animate-zoom" src="Homepage2.gif" alt="" width="400" height="300">
+<img img class="w3-animate-zoom" src="HP3.jpg" alt="" width="400" height="300">
+</center>
+<center><hr size="8" width="100%" color="black"></center>
+<p><center><div class="w3-bar w3-light-grey"><i>
+    One of the biggest issues we have right now is the huge amount of bio-medical waste that is generated because of the Covid-19 pandemic.
+    Woven Masks PPE kits, shoe covers, gloves are being used and thrown at the alarming rate. While cities have some form of waste management,
+    rural areas are absolutely lost.
+<div></div>
+Every year, 8 million tonnes of plastic waste from around the globe ends up in the oceans, with a bulk of it entering through the world's rivers.
+According to statistics by the Environmental Protection Admistration, mostly general waste is thrown out by the public.
+<div></div>
+Till Jan 2021, India had generated 33,000 tonnes of Covid-19 related waste (source:Business Today)
+<div></div>
+However, one man is looking at solving this problem and providing a useful product that has multipurpose use across the country.
+</i></div></center>
+<center><hr size="8" width="100%" color="black"></center>
+<center><b><h2><font color="black">Select Your Role: </font></h2></b>
+<img src="hpdonar.jpg" height="300" width="300"><br><br>  <a class="btn btn-primary" href="#signup">Donar</a><br><br>
+<img src="hpmunicipal.jpg" height="300" width="300"> <br><br> <a class="btn btn-primary" href="#signup">Municipal</a><br><br>
+<img src="hpreceiver.jpg" height="300" width="300"> <br><br> <a class="btn btn-primary" href="#signup">Receiver</a><br><br>
+</center><p><center><footer><br>
+    <center><hr size="8" width="100%" color="black"></center>
+    For More Details:<br>
+    <a href="https://youtu.be/uZiUP3Yg8Tk"><i class="fa fa-bars" aria-hidden="true"></i><br></a>
+    <a href="https://youtu.be/uZiUP3Yg8Tk">https://youtu.be/uZiUP3Yg8Tk</a>
+    <b><p>
+    Stay Home! Stay Safe!
+</p></i></b></div>
+<p></p>
+</div></body>
+</html>

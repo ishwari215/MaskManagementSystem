@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mask Management System</title>
+    <style>
+        img {
+          border: 10px solid rgb(7, 7, 7);
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.dropbtn {
+  background-color: #BB8FCE;
+  background-image: linear-gradient(#17A589, #F1C40F);
+  color: black;
+  padding: 16px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #48C9B0;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #AEB6BF;
+  min-width: 18vw;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 33px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #00cc00;
+  color: white;
+}
+
+.topnav-centered a {
+  float: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.topnav-right a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  font-size: 17px;
+}
+.topnav .icon {
+  display: none;
+}
+
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+    </style>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+
+<div class="topnav-left">
+    <a href="#home" class="active">MASK MANAGEMENT SYSTEM</a>
+    <a href="#news">Donar</a>
+  <a href="#contact">Municipal</a>
+    <a href="#search">Receiver</a>
+    <a href="#about">Pioneer Of A Event</a>
+    <a href="#news">Our Team</a>
+    <a href="#news">Contact Us</a>
+
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>    <body style="background-color:powderblue;"></body>
+    <a href="index.html"><h3><svg width="24" height="24" viewBox="0 0 25 18">
+        <path d="M3 10v11h6v-7h6v7h6v-11L12,3z"/>
+      </svg> Back to Home </h3></a>
+    <br><br><br>
+    <center>
+    <div class="row">
+        <div class="column">
+          <img src="MunicipalPage1.jpg" alt="MunicipalPage1" style="width:82.5%">
+        </div>
+        <div class="column">
+          <img src="MunicipalPage3.jpg" alt="MunicipalPage3" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="MunicipalPage4.png" alt="MunicipalPage4" style="width:79.5%">
+        </div>
+      </div>
+    </center>
+    <br><br>
+    <center>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn"><b> Areas where bins are full: </b></button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#Nashik"><b>Nashik</b></a>
+        <a href="#Pune"><b>Pune</b></a>
+        <a href="#Mumbai"><b>Mumbai</b></a>
+        <a href="#Satara"><b>Satara</b></a>
+        <a href="#Thane"><b>Thane</b></a>
+      </div>
+    </div>
+  </center>
+    <script>
+      /* When the user clicks on the button, 
+      toggle between hiding and showing the dropdown content */
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+      
+      // Close the dropdown if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+      </script>
+    <br>
+    <center><h3 style="font-family: cursive;" style="font-size: 10vw;">A Municipality is a administrative division composed of a defined territory and population.
+
+        Waste Management is the collection, transport, processing, recycling or disposal and monitoring the waste materials.
+        
+        Methods of collection of waste are either door-to-door or using containers or communal bins.
+        
+        As per our project, an extra bin is kept in a residential area for the collection of used masks which will be further transported for recycling.
+        
+        Members of the society or a particular locality will deposit their masks in the bin and the garbage collecting trucks throughout the city would collect it and take it to the dumping yard.
+        
+        From their the collected mask bins will be sent to the receiver company.
+        
+        This helps to manage the bio-medical waste and keep our surrounding clean.</h3></center>
+    <br>
+    <center><h1 style="background-color: powderblue;" style="font-size: xx-large;"  style="color: black;">...</h1></center>
+    <center><b><p style="font-family: cursive;" style="font-size: 2vw;">Stay Home,Stay safe!</p></b></center>
+</body>
+</html>
